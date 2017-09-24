@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\hw1\nyucodebase\nyucodebase\main.cpp(84): warning C4305: 'argument': truncation from 'double' to 'float'
+  NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\HW1\NYUCodebase\Debug\NYUCodebase.exe
+  NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\HW1\NYUCodebase\Debug\NYUCodebase.pdb (Full PDB)
