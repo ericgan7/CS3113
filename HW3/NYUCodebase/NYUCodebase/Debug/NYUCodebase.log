@@ -1,0 +1,21 @@
+﻿  main.cpp
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(318): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(356): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(361): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(366): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(385): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(387): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(404): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(406): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(423): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(452): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(464): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(469): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(474): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(554): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(563): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(573): warning C4018: '<': signed/unsigned mismatch
+c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw3\nyucodebase\nyucodebase\main.cpp(270): warning C4715: 'entity::shoot': not all control paths return a value
+  NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\CS3113-Homework\HW3\NYUCodebase\Debug\NYUCodebase.exe
+  NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\CS3113-Homework\HW3\NYUCodebase\Debug\NYUCodebase.pdb (Full PDB)

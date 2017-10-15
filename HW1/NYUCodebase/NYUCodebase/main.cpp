@@ -7,6 +7,7 @@
 #include <SDL_image.h>
 #include "Matrix.h"
 #include "ShaderProgram.h"
+#include <vector>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -48,6 +49,7 @@ int main(int argc, char *argv[])
 
 	glViewport(0, 0, 640, 360);
 	ShaderProgram program(RESOURCE_FOLDER"vertex_textured.glsl", RESOURCE_FOLDER"fragment_textured.glsl");
+	ShaderProgram other(RESOURCE_FOLDER"vertex.glsl", RESOURCE_FOLDER"fragment.glsl");
 	GLuint owTexture = LoadTexture(RESOURCE_FOLDER "pharah.png");
 	GLuint lolTexture = LoadTexture(RESOURCE_FOLDER "riven.png");
 	GLuint wTexture = LoadTexture(RESOURCE_FOLDER "yennifer.png");
@@ -99,7 +101,6 @@ int main(int argc, char *argv[])
 
 		glDisableVertexAttribArray(program.positionAttribute);
 		glDisableVertexAttribArray(program.texCoordAttribute);
-
 		SDL_GL_SwapWindow(displayWindow);
 	}
 
