@@ -228,6 +228,16 @@ public:
 		return (1.0f - t)*v0 + t*v1;
 	}
 	void update(float elapsed) {
+		if (type == ENTITY_PLAYER) {
+			if (fabs(position[0]) > 9.5f) {
+				if (position[0] < 0.0f) {
+					position[0] = -9.5f;
+				}
+				else {
+					position[0] = 9.5f;
+				}
+			}
+		}
 		position[0] += velocity[0] * elapsed;
 		position[1] += velocity[1] * elapsed;
 		if (type == ENTITY_ENEMY1 || type == ENTITY_ENEMY2
