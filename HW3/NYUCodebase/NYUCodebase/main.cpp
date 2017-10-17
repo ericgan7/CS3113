@@ -261,7 +261,7 @@ public:
 	bool shoot() {
 		switch (type) {
 		case ENTITY_PLAYER:
-			if (time > 0.75f) {
+			if (time > 0.50f) {
 				time = 0.0f;
 				return true;
 			}
@@ -475,7 +475,7 @@ public:
 			enemyBullets[i].update(elapsed);
 		}
 		if (checkMovement()) {	//if enemies need to change direction
-			float v[3] = { 0.0f, -1.0f, 0.0f };
+			float v[3] = { 0.0f, -0.50f, 0.0f };
 			for (int i = 0; i < enemies.size(); ++i) {
 				enemies[i].input(v, true);
 				enemies[i].changeDirection(goingRight);
@@ -607,7 +607,7 @@ public:
 	}
 	void spawnEnemies() {
 		float v[12] = { -0.5f, 0.5f, -0.5f, -0.5f, 0.5, 0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f };
-		float velocity[3] = { 0.25f, 0.0f, 1.0f };
+		float velocity[3] = { 0.50f, 0.0f, 1.0f };
 		float size[2] = { 0.5f, 0.5f };
 		int enemyType;
 		float position[3] = { 1.0f, 1.0f, 1.0f };
