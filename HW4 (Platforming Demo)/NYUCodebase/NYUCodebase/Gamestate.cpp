@@ -25,7 +25,9 @@ namespace Platformer {
 	class Gamestate {
 	public:
 		Gamestate(std::ifstream* map, GLuint tex[]) {
-			textures = tex;
+			for (int i = 0; i < 5; ++i) {
+				textures[i] = tex[i];
+			}
 			std::string line;
 			while (getline(*map, line)) {
 				if (line == "[header]") {
@@ -36,8 +38,8 @@ namespace Platformer {
 				else if (line == "[layer]") {
 					readLayer(map);
 				}
-				else if (line == "[entity]") {
-					readObjects(map);
+				else if (line == "[Entities]") {
+					readObjects(map, tex);
 				}
 			}
 		}
@@ -85,30 +87,26 @@ namespace Platformer {
 					getline(*map, line);
 					createTileMap(map);
 				}
-				if (value == "Interactable") {
-					getline(*map, line);
-					createStatics(map);
-				}
 			}
 			return true;
 		}
 		void readObjects(std::ifstream* map, GLuint textures[]) {
 			std::string line;
+			entityType type;
 			while (getline(*map, line)) {
 				if (line == "") { break; }
 				std::istringstream sStream(line);
 				std::string key, value;
-				entityType type;
 				getline(sStream, key, '=');
 				getline(sStream, value);
 				if (key == "type") {
-					if (value == "ENTITY_COIN") {
+					if (value == "coin") {
 						type = ENTITY_COIN;
 					}
-					else if (value == "ENTITY_PLAYER") {
+					else if (value == "player") {
 						type = ENTITY_PLAYER;
 					}
-					else if (value == "ENTITY_ENEMY") {
+					else if (value == "enemy") {
 						type = ENTITY_ENEMY;
 					}
 				}
@@ -117,9 +115,9 @@ namespace Platformer {
 					std::string xPosition, yPosition;
 					getline(lineStream, xPosition, ',');
 					getline(lineStream, yPosition, ',');
-					float x = atoi(xPosition.c_str())*tilesize;
-					float y = atoi(yPosition.c_str())*-tilesize;
-					dynamics.push_back(&entity(x, y, 0.0f, 0.0f, type, textures));
+					float x = atoi(xPosition.c_str());
+					float y = atoi(yPosition.c_str())*-1;
+					dynamics.push_back(new entity(x, y, type, textures));
 				}
 			}
 		}
@@ -133,7 +131,7 @@ namespace Platformer {
 					getline(lineStream, tile, ',');
 					int val = atoi(tile.c_str());
 					if (val > 0) {  //  the tiles in this format are indexed from 1 not 0
-						tilemap[y][x] = val - 1;
+						tilemap[y][x] = val;
 					}
 					else {
 						tilemap[y][x] = 0;
@@ -141,184 +139,154 @@ namespace Platformer {
 				}
 			}
 		}
-		void createStatics(std::ifstream* map) {
-			float verticies[12] = { -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, 0.5f, -0.5f, -0.5f, -0.5f, 0.5f, 0.5f };
-			std::string line;
-			for (int y = 0; y < height; ++y) {
-				getline(*map, line);
-				std::istringstream lineStream(line);
-				std::string tile;
-				for (int x = 0; x < width; ++x) {
-					int val = atoi(tile.c_str());
-					if (val > 0) {
-						if (val == 71) {
-							statics.push_back(&entity(x*tilesize, -y*tilesize, 0.0f, 0.0f, LADDERTOP));
-						}
-						else if (val == 85) {
-							statics.push_back(&entity(x*tilesize, -y*tilesize, 0.0f, 0.0f, LADDER));
-						}
-					}
-				}
-			}
-		}
-		void getVerticies(entityType* type, inputAction* state, float** vert, float** size, GLuint* texture) {
-			if (*type == ENTITY_COIN) {
-				float v[12] = { -0.25f, 0.25f, -0.25f, -0.25f, 0.25f, 0.25f, 0.25f, -0.25f, -0.25f, -0.25f, 0.25f, 0.25f };
-				float s[2] = { 0.25f, 0.25f };
-				*vert = v;
-				*size = s;
-				*texture = textures[5];
-			}
-			else if (*type == ENTITY_PLAYER) {
-				float v[12] = { -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, 0.5f, -0.5f, -0.5f, -0.5f, 0.5f, 0.5f };
-				float s[2] = { 0.5f, 0.5f };
-				*vert = v;
-				*size = s;
-				*texture = textures[3];
-			}
-			else if (*type == ENTITY_ENEMY) {
-				float v[12] = { -0.25f, 0.15f, -0.25f, -0.15f, 0.25f, 0.15f, 0.25f, -0.15f, -0.25f,-0.15f, 0.25f, 0.15f };
-				float s[2] = { 0.25f, 0.15f };
-				*vert = v;
-				*size = s;
-				*texture = textures[4];
-			}
-		}
 		void input(const inputAction input) {
-			if (input == CLIMB) {
-				dynamics[0]->input(input, 1.0f);
-			}
-			else if (input == DUCK) {
-				dynamics[0]->input(input, 0.0f);
+			if (input == DUCK) {
+				dynamics[0]->input(DUCK, 0.0f);
 			}
 			else if (input == LEFT) {
-				dynamics[0]->input(input, -2.0f);
+				dynamics[0]->input(LEFT, -5.0f);
 			}
 			else if (input == RIGHT) {
-				dynamics[0]->input(input, 2.0f);
+				dynamics[0]->input(RIGHT, 5.0f);
 			}
 			else if (input == JUMP) {
-				dynamics[0]->input(input, 5.0f);
+				dynamics[0]->input(JUMP, 7.0f);
+			}
+			else { //idle
+				dynamics[0]->input(IDLE, 0.0f);
 			}
 		}
 		void render(ShaderProgram* program, Matrix* modelviewMatrix, Matrix* projectionMatrix) {
-			std::vector<float> vertexData;
-			dynamics[0]->render(program, modelviewMatrix, projectionMatrix, textures);	//render player and set projectionMatrix
-			for (int y = 0; y < height; ++y) {									//render static tiles
-				for (int x = 0; x < width; ++x) {
-					renderStatics(x, y, program, modelviewMatrix, projectionMatrix);
-					vertexData.insert(vertexData.end(), {
-						(float)tilesize * x, -(float)tilesize * y,
-						(float)tilesize * x, (-(float)tilesize * y) - (float)tilesize,
-						((float)tilesize * x) + (float)tilesize, (-(float)tilesize * y) - (float)tilesize,
-						(float)tilesize * x, -(float)tilesize * y,
-						((float)tilesize * x) + (float)tilesize, (-(float)tilesize * y) - (float)tilesize,
-						((float)tilesize * x) + (float)tilesize, -(float)tilesize * y
-					});
-				}
+			dynamics[0]->render(program, modelviewMatrix, projectionMatrix);	//render player and set projectionMatrix
+			if (!runOnce) {
+				renderStatics(program, modelviewMatrix, projectionMatrix);			//renders terrain
+				runOnce = true;
 			}
-			glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, vertexData.data());
-			glEnableVertexAttribArray(program->vertexShader);
-			glDrawArrays(GL_TRIANGLES, 0, vertexData.size() / 2);
+			else {
+				modelviewMatrix->Identity();
+				program->SetModelviewMatrix(*modelviewMatrix);
+				glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, staticVerticies.data());
+				glEnableVertexAttribArray(program->vertexShader);
+				GLuint textureMap = textures[1];
+				glBindTexture(GL_TEXTURE_2D, textureMap);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+				glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, staticTextures.data());
+				glEnableVertexAttribArray(program->texCoordAttribute);
+				glDrawArrays(GL_TRIANGLES, 0, staticVerticies.size() / 2);
+			}
 			for (int i = 1; i < dynamics.size(); ++i) {						//render dynamic objects except player
 				dynamics[i]->render(program, modelviewMatrix, projectionMatrix);
 			}
-			for (entity* s : statics) {										//render interactable objects;
-				s->render(program, modelviewMatrix, projectionMatrix, textures);
-			}
-		}
-		void renderStatics(int x, int y, ShaderProgram* program, Matrix* modelviewMatrix, Matrix* projectionMatrix) {
-			GLuint textureMap;
-			float textureSize;
 			float x, y;
-			switch (tilemap[y][x]) {
-			case 25: //left rounded grass edge
-				textureMap = textures[1];
-				x = 3 * tilesize;
-				y = 3 * -tilesize;
-				break;
+			y = -1.0f;
+			if (dynamics[0]->xPosition() < 10.0f) {
+				x = 1.0f;
+			}
+			else if (dynamics[0]->xPosition() > 40.0f) {
+				x = 31.0f;
+			}
+			else {
+				x = dynamics[0]->xPosition() - 9.0f;
+			}
+			modelviewMatrix->Identity();
+			modelviewMatrix->Translate(x, y, 0.0f);
+			DrawText(program, modelviewMatrix, projectionMatrix, "SCORE:", 0.5f, 0.2f);
+			modelviewMatrix->Identity();
+			modelviewMatrix->Translate(x + 4.0f, y, 0.0f);
+			std::stringstream sScore;
+			sScore << score;
+			DrawText(program, modelviewMatrix, projectionMatrix, sScore.str(), 0.5f, 0.0f);
+		}
+		bool setStaticTextures(int xCoordinate, int yCoordinate, ShaderProgram* program, Matrix* modelviewMatrix, Matrix* projectionMatrix, std::vector<float>* tex) {
+			//binds the correct texture to draw;
+			float textureSize = 350.0f;
+			float x, y;
+			switch (tilemap[yCoordinate][xCoordinate]) {
+			case 0:
+				return false;
 			case 26: //flat grass
-				textureMap = textures[1];
-				x = 4 * tilesize;
-				y = 3 * -tilesize;
-				break;
-			case 18: //right rounded grass edge
-				textureMap = textures[1];
-				x = 3 * tilesize;
-				y = 2 * -tilesize;
+				x = 2 * tilesize;
+				y = 1 * tilesize;
 				break;
 			case 204: //wooden crate:
-				textureMap = textures[2];
 				x = 0 * tilesize;
-				y = 11 * -tilesize;
+				y = 0 * tilesize;
 				break;
 			case 31: //right sharp grass edge
-				textureMap = textures[1];
-				x = 2 * tilesize;
-				y = 4 * -tilesize;
+				x = 3 * tilesize;
+				y = 2 * tilesize;
 				break;
 			case 38: //left sharp grass edge
-				textureMap = textures[1];
-				x = 1 * tilesize;
-				y = 5 * -tilesize;
+				x = 2 * tilesize;
+				y = 2 * tilesize;
 				break;
 			case 30: //dirt block
-				textureMap = textures[1];
-				x = 0 * tilesize;
-				y = 5 * -tilesize;
+				x = 1 * tilesize;
+				y = 3 * tilesize;
 				break;
 			case 3: //right grass flat
-				textureMap = textures[1];
-				x = 2 * tilesize;
-				y = 0 * -tilesize;
+				x = 0 * tilesize;
+				y = 3 * tilesize;
 				break;
 			case 10: //right grass flat
-				textureMap = textures[1];
-				x = 2 * tilesize;
-				y = 1 * -tilesize;
+				x = 4 * tilesize;
+				y = 2 * tilesize;
 				break;
 			case 168://waves
-				textureMap = textures[2];
-				x = 6 * tilesize;
-				y = 8 * -tilesize;
+				x = 4 * tilesize;
+				y = 0 * tilesize;
 				break;
 			case 99: //water block
-				textureMap = textures[2];
-				x = 7 * tilesize;
-				y = 3 * -tilesize;
-				break;
-			case 4: //grass top right corner
-				textureMap = textures[1];
 				x = 3 * tilesize;
-				y = 0 * -tilesize;
-				break;
-			case 5: //slanted grass right
-				textureMap = textures[1];
-				x = 4 * tilesize;
-				y = 0 * -tilesize;
+				y = 0 * tilesize;
 				break;
 			case 124: //exit sign
-				textureMap = textures[2];
-				x = 4 * tilesize;
-				y = 5 * -tilesize;
+				x = 0 * tilesize;
+				y = 1 * tilesize;
 				break;
 			case 96: //go right sign
-				textureMap = textures[2];
-				x = 4 * tilesize;
-				y = 3 * -tilesize;
+				x = 1 * tilesize;
+				y = 1 * tilesize;
 				break;
 			}
-			if (textureMap = textures[1]) {
-				textureSize = 512.0f;
+			tex->insert(tex->end(), { x / textureSize, y / textureSize,
+				x / textureSize, (y + tilesize) / textureSize,
+				(x + tilesize) / textureSize, y / textureSize,
+				(x + tilesize) / textureSize, (y + tilesize) / textureSize,
+				x / textureSize, (y + tilesize) / textureSize,
+				(x + tilesize) / textureSize, y / textureSize });
+			return true;
+		}
+		void renderStatics(ShaderProgram* program, Matrix* modelviewMatrix, Matrix* projectionMatrix) {
+			std::vector<float> vertexData;
+			std::vector<float> texData;
+			for (int y = 0; y < height; ++y) {									//render static tiles
+				for (int x = 0; x < width; ++x) {
+					if (nearPlayer(x) && setStaticTextures(x, y, program, modelviewMatrix, projectionMatrix, &texData)) {
+						vertexData.insert(vertexData.end(), {
+							(float)x, (float)-y,
+							(float)x, (float)-y - 1,
+							(float)x + 1, (float)-y,
+							(float)x + 1, (float)-y - 1,
+							(float)x, (float)-y - 1,
+							(float)x + 1, (float)-y });
+					}
+				}
 			}
-			else if (textureMap = textures[2]) {
-				textureSize = 1024.0f;
-			}
-			float tex[12] = { x / textureSize, y / textureSize, x / textureSize, (y - tilesize) / textureSize, (x + tilesize) / textureSize, (x + tilesize) / textureSize,
-				(y - tilesize) / textureSize, x / textureSize, (y - tilesize) / textureSize, (x + tilesize) / textureSize, y / textureSize };
+			staticVerticies = vertexData;
+			staticTextures = texData;
+			modelviewMatrix->Identity();
+			program->SetModelviewMatrix(*modelviewMatrix);
+			glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, vertexData.data());
+			glEnableVertexAttribArray(program->vertexShader);
+			GLuint textureMap = textures[1];
 			glBindTexture(GL_TEXTURE_2D, textureMap);
-			glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, tex);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+			glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, texData.data());
 			glEnableVertexAttribArray(program->texCoordAttribute);
+			glDrawArrays(GL_TRIANGLES, 0, vertexData.size() / 2);
 		}
 		void entityCollisions(float elapsed) {
 			//coin collisions
@@ -334,51 +302,97 @@ namespace Platformer {
 					}
 				}
 			}
-			//ladder collisions
 		}
-		void staticCollisions(float elapsed) {
+		void staticCollisions(float elapsed, Matrix* projectionMatrix) {
 			int x, y;
-			bool t, b, l, r = false;
+			bool t, b, r, l;
 			float buffer = 0.01f;
+			float destination;
 			for (entity* d : dynamics) { //dynamic - static entity collisions
-										 //checsk if the entity has fallen within a static tile and pushes them out.
+										 //check if the entity has fallen within a static tile and pushes them out.
 				d->updateY(elapsed);//check y collisions
+				t = false;
+				b = false;
+				r = false;
+				l = false;
 				worldToTileCoordinates(d->xPosition(), d->bottom(), &x, &y);
 				if (checkStatic(tilemap[y][x])) {
 					b = true;
-					d->translate(0.0f, d->penetration(d->bottom(), y*-tilesize, tilesize / 2, 1)* +buffer);
+					destination = fabs(d->bottom() + y);
+					d->translate(0.0f, destination + buffer);
 				}
 				worldToTileCoordinates(d->xPosition(), d->top(), &x, &y);
 				if (checkStatic(tilemap[y][x])) {
 					t = true;
-					d->translate(0.0f, d->penetration(d->top(), y*-tilesize, tilesize / 2, 1)*-1 - buffer);
+					destination = fabs(d->top() + (y + 1));
+					d->translate(0.0f, -destination - buffer);
 				}
-				d->updateX(elapsed);//check x collisions
+				d->updateX(elapsed, projectionMatrix);//check x collisions
 				worldToTileCoordinates(d->right(), d->yPosition(), &x, &y);
 				if (checkStatic(tilemap[y][x])) {
 					r = true;
-					d->translate(d->penetration(d->right(), x, tilesize / 2, 0)*-1 - buffer, 0.0f);
+					destination = fabs(d->right() - x);
+					d->translate(-destination - buffer, 0.0f);
 				}
 				worldToTileCoordinates(d->left(), d->yPosition(), &x, &y);
 				if (checkStatic(tilemap[y][x])) {
 					l = true;
-					d->translate(d->penetration(d->left(), x + tilesize, tilesize / 2, 0) + buffer, 0.0f);
+					destination = fabs(d->left() - (x + 1));
+					d->translate(destination + buffer, 0.0f);
 				}
 				d->changeCollisionFlags(t, b, r, l);
 			}
 		}
 		void worldToTileCoordinates(float worldX, float worldY, int *gridX, int *gridY) {
-			*gridX = (int)(worldX / tilesize);
-			*gridY = (int)(-worldY / tilesize);
+			*gridX = floor(worldX);
+			*gridY = floor(-worldY);
 		}
 		bool checkStatic(int n) { //checks if it is collidable
-			if (n == 168 || n == 99 || n == 124 || n == 96) {
+			if (n == 124 || n == 96 || n == 0) {
+				return false;
+			}
+			else if (n == 168 || n == 99) {
+				dynamics[0]->translate(-dynamics[0]->xPosition() + 2, -dynamics[0]->yPosition() - 6);
 				return false;
 			}
 			return true;
 		}
-		void update(float elapsed) {
-			staticCollisions(elapsed);
+		void DrawText(ShaderProgram *program, Matrix* modelviewMatrix, Matrix*projectionMatrix, std::string text, float size, float spacing) {
+			float texture_size = 1.0 / 16.0f;
+			std::vector<float> vertexData;
+			std::vector<float> texCoordData;
+			for (int i = 0; i < text.size(); i++) {
+				int spriteIndex = (int)text[i];
+				float texture_x = (float)(spriteIndex % 16) / 16.0f;
+				float texture_y = (float)(spriteIndex / 16) / 16.0f;
+				vertexData.insert(vertexData.end(), {
+					((size + spacing) * i) + (-0.5f * size), 0.5f * size,
+					((size + spacing) * i) + (-0.5f * size), -0.5f * size,
+					((size + spacing) * i) + (0.5f * size), 0.5f * size,
+					((size + spacing) * i) + (0.5f * size), -0.5f * size,
+					((size + spacing) * i) + (0.5f * size), 0.5f * size,
+					((size + spacing) * i) + (-0.5f * size), -0.5f * size,
+				});
+				texCoordData.insert(texCoordData.end(), {
+					texture_x, texture_y,
+					texture_x, texture_y + texture_size,
+					texture_x + texture_size, texture_y,
+					texture_x + texture_size, texture_y + texture_size,
+					texture_x + texture_size, texture_y,
+					texture_x, texture_y + texture_size,
+				});
+			}
+			glBindTexture(GL_TEXTURE_2D, textures[0]);
+			program->SetModelviewMatrix(*modelviewMatrix);
+			program->SetProjectionMatrix(*projectionMatrix);
+			glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, vertexData.data());
+			glEnableVertexAttribArray(program->vertexShader);
+			glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, texCoordData.data());
+			glEnableVertexAttribArray(program->texCoordAttribute);
+			glDrawArrays(GL_TRIANGLES, 0, vertexData.size() / 2);
+		}
+		void update(float elapsed, Matrix* projectionMatrix) {
+			staticCollisions(elapsed, projectionMatrix);
 			entityCollisions(elapsed);
 		}
 	private:
@@ -387,9 +401,11 @@ namespace Platformer {
 		float verticies[12] = { -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, 0.5f, -0.5f, -0.5f, -0.5f, 0.5f, 0.5f };
 		int tilesize;
 		int** tilemap;
-		std::vector<entity*> statics;
 		std::vector<entity*> dynamics;
 		int score;
-		GLuint* textures;
+		GLuint textures[5];
+		bool runOnce = false;
+		std::vector<float> staticVerticies;
+		std::vector<float> staticTextures;
 	};
 }

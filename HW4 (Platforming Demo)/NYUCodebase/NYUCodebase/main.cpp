@@ -130,7 +130,7 @@ public:
 				texture = textures[2];
 				width = 72.0f;
 				height = 97.0f;
-				if (animationTime > 0.1f) {
+				if (animationTime > 0.08f) {
 					animationTime = 0;
 					animationState = (animationState + 1) % 11;
 				}
@@ -260,8 +260,8 @@ public:
 	void updateY(float elapsed) {
 		velocity[1] = lerp(velocity[1], -8.0f, elapsed* 0.95f);
 		velocity[1] += acceleration[1] * elapsed;
-		if (fabs(velocity[1]) > 10.0f) {
-			velocity[1] = -5.0f;
+		if (velocity[1] < -3.0f) {
+			velocity[1] = -3.0f;
 		}
 		position[1] += velocity[1] * elapsed;
 		animationTime += elapsed;
@@ -627,7 +627,7 @@ public:
 		std::vector<float> texData;
 		for (int y = 0; y < height; ++y) {									//render static tiles
 			for (int x = 0; x < width; ++x) {
-				if (nearPlayer(x) && setStaticTextures(x, y, program, modelviewMatrix, projectionMatrix, &texData)) {
+				if (setStaticTextures(x, y, program, modelviewMatrix, projectionMatrix, &texData)) {
 					vertexData.insert(vertexData.end(), {
 						(float)x, (float)-y,
 						(float)x, (float)-y - 1,
