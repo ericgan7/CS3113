@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <set>
 #include <SDL_mixer.h>
+#include <time.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -2162,10 +2163,17 @@ private:
 class Gamestate {
 public:
 	Gamestate(std::vector<GLuint> tex, UI* gameUI, soundAssets& sounds) : textures(tex), gameUI(gameUI), sounds(sounds) {
+		setGameState();
+	}
+	void setGameState() {
+		buildings.clear();
+		playerUnits.clear();
+		enemyUnits.clear();
+		selected.clear();
 		resources.insert(resources.end(), { 0, 0, 500, 20, 20 });// workers, food,  gold, lumber, stone
 		resourceProduction.insert(resourceProduction.end(), { 0,0,0,0,0 });
-		stats.insert(stats.end(), {0, 0, 0, 0}); //gold earned, enemykilled, playerkilled, built
-		//map
+		stats.insert(stats.end(), { 0, 0, 0, 0 }); //gold earned, enemykilled, playerkilled, built
+												   //map
 		map = std::vector <std::vector<int> >(mapHeight, std::vector<int>(mapWidth, 0));
 		terrainMap = std::vector <std::vector<int> >(mapHeight, std::vector<int>(mapWidth, 0));
 		powerMap = std::vector <std::vector<int> >(mapHeight, std::vector<int>(mapWidth, 0));
@@ -2173,6 +2181,7 @@ public:
 		mouseState.first = S_DEFAULT;
 		mouseState.second = B_NONE;
 
+		srand(time(0));
 		generateTiles(map, 4, 4); //grass & dirt
 		generateTiles(terrainMap, 5, 4); //generate terrain features - lake, mountain, forests
 		std::vector<std::vector<std::pair<int, int>>> mapArea;
@@ -2205,10 +2214,10 @@ public:
 			for (int x = 0; x < mapWidth; ++x) {
 				/*
 				if (terrainMap[y][x] == 0) {
-					navigationMap[y].push_back(new node(x + 0.5f, y + 0.5f, 1));
+				navigationMap[y].push_back(new node(x + 0.5f, y + 0.5f, 1));
 				}
 				else {
-					navigationMap[y].push_back(new node(x + 0.5f, y + 0.5f, mapHeight));
+				navigationMap[y].push_back(new node(x + 0.5f, y + 0.5f, mapHeight));
 				}
 				*/
 				if (buildingMap[y][x] < 2) {
@@ -2322,7 +2331,6 @@ public:
 				}
 			}
 		}
-
 	}
 	//cellular automata - modified game of life
 	void generateTiles(std::vector<std::vector<int>>& mapType, int revive, int death) {
@@ -2420,7 +2428,9 @@ public:
 							++b;
 							x = floor(points.first.first + a + xStep*b);
 							y = floor(points.first.second + a + yStep*b);
-							terrainMap[y][x] = 0;
+							if (y < mapHeight && y < 0 && x < mapWidth && x > 0) {
+								terrainMap[y][x] = 0;
+							}
 
 						}
 					}
@@ -2713,7 +2723,7 @@ public:
 			}
 		}
 		for (int i = 0; i < 4; ++i) {
-			playerUnits.push_back(new entity(E_ARCHER, x + 0.8f* (i-1), y + 3, textures, sounds));
+			playerUnits.push_back(new entity(E_ARCHER, x + 0.8f* (i-1), y + 2, textures, sounds));
 		}
 	}
 	void unitCommand(commandState command, float xDestination, float yDestination) {
@@ -3405,8 +3415,6 @@ break;
 		renderCursor(program, modelviewMatrix);
 		if (transition) {
 			float a = mapValue(transitionState, 0, 180, 0, 1);
-			int volume = mapValue(transitionState, 0, 180, 0, 30);
-			Mix_VolumeMusic(30 - volume);
 			float box[12] = { -ORTHOW, ORTHOH, -ORTHOW, -ORTHOH, ORTHOW, ORTHOH, ORTHOW, -ORTHOH, ORTHOW, ORTHOH, -ORTHOW, -ORTHOH };
 			float tex[12] = { 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f };
 			float black[4] = { 0.0f, 0.0f, 0.0f, a };
@@ -3700,7 +3708,7 @@ break;
 
 	}
 private:
-	struct time {
+	struct gTime {
 		bool update(float elapsed) {
 			accumulator += elapsed;
 			if (accumulator > 3.0f) {
@@ -3785,7 +3793,7 @@ private:
 
 	//misc
 	bool running = false;
-	time gameTime;
+	gTime gameTime;
 	std::vector<entity*> selected;
 	std::vector<int> selectedPos;
 	std::pair<commandState, buttonType> mouseState;
@@ -3896,6 +3904,8 @@ class Gamemenu {
 				float tex[12] = { 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f };
 				++animationState;
 				float a = mapValue(animationState, 0, 180, 0, 1);
+				int volume = mapValue(animationState, 0, 180, 0, 30);
+				Mix_VolumeMusic(30 - volume);
 				float black[4] = { 0.0f, 0.0f, 0.0f, a };
 				program.SetColor(black);
 				glBindTexture(GL_TEXTURE_2D, textures[2]);
