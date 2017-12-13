@@ -20,3 +20,11 @@ There a three gamestates:
 	Game
 	End - end screen shows some stats from the game.
 
+2 Shader programs:
+	1 sets the color modifier as a uniform
+	1 sets color per vertex (fog of war)
+
+Known issues:
+	Still update the camera with the projection matrix instead of the view matrix.
+	I had a weird way of using the modelview matrix in hindsight.
+	sampling along the points to see if there is impassible terrain does not work properly.
