@@ -555,7 +555,8 @@ public:
 		else if (type == E_ARCHER) {
 			switch (unitState) {
 			case STATUS_DEFAULT:
-				if (target != nullptr && target->health > 0) {
+				if (target != nullptr && target->health > 0 
+					&& distance(target->position[0] , target->position[1], position[0], position[1])< statistics[3]) {
 					unitState = STATUS_ATTACK;
 					previous = STATUS_DEFAULT;
 					animationState = 0;
@@ -940,6 +941,7 @@ public:
 				break;
 			case STATUS_MOVE:
 			case STATUS_ATTACKMOVE:
+			case STATUS_PATROL:
 				animation = mapValue(animationState, 0, 60, 0, 5);
 				switch (unitDirection) {
 				case D_N:
@@ -2683,7 +2685,7 @@ public:
 
 	//entities
 	void generateEnemies() {
-		int count = 80;
+		int count = 60;
 		int attempts = 0;
 		float xCenter = (mapWidth / 2) + 0.5f;
 		float yCenter = (mapHeight / 2) - 0.5f;
@@ -2698,7 +2700,9 @@ public:
 				y = rand() % mapWidth;
 				xDeviation = rand() / RAND_MAX;
 				yDeviation = rand() / RAND_MAX;
-				if (terrainMap[y][x] == 0 && distance(x, y, xCenter, yCenter) > 15.0f) { //valid location
+				if (terrainMap[y][x] == 0 && distance(x, y, xCenter, yCenter) > 15.0f &&
+					x + xDeviation > 0 && x + xDeviation < mapWidth &&
+					y + yDeviation > 0 && y + yDeviation < mapHeight) { //valid location
 					for (entity* other : enemyUnits) {
 						//check if it collides with other entities;
 						if (!other->boxCollision(x + xDeviation, y + yDeviation, x + xDeviation + xSize, y + yDeviation + ySize)) {
@@ -3216,11 +3220,11 @@ break;
 		if (time) {
 			for (int i = 2; i < 5; ++i) {
 				resources[i] += resourceProduction[i];
+				stats[0] += resourceProduction[2];
 			}
 		}
 		resources[0] = r[0];
 		resources[1] = r[1];
-		stats[0] += r[2];
 	}
 	void updateResourceBuilding(entity* b) {
 		int resource = 0;
