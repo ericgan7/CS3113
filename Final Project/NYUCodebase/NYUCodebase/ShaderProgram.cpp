@@ -22,10 +22,11 @@ ShaderProgram::ShaderProgram(const char *vertexShaderFile, const char *fragmentS
     
     modelviewMatrixUniform = glGetUniformLocation(programID, "modelviewMatrix");
     projectionMatrixUniform = glGetUniformLocation(programID, "projectionMatrix");
+	colorModifierUniform = glGetUniformLocation(programID, "colorVector");
     
     positionAttribute = glGetAttribLocation(programID, "position");
     texCoordAttribute = glGetAttribLocation(programID, "texCoord");
-    
+	exploredAttribute = glGetAttribLocation(programID, "state");
 }
 
 ShaderProgram::~ShaderProgram() {
@@ -88,4 +89,9 @@ void ShaderProgram::SetModelviewMatrix(const Matrix &matrix) {
 void ShaderProgram::SetProjectionMatrix(const Matrix &matrix) {
     glUseProgram(programID);
     glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, matrix.ml);    
+}
+
+void ShaderProgram::SetColor(const float vector[]) {
+	glUseProgram(programID);
+	glUniform4fv(colorModifierUniform, 1, vector);
 }

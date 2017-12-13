@@ -17,6 +17,7 @@ class ShaderProgram {
     
         void SetModelviewMatrix(const Matrix &matrix);
         void SetProjectionMatrix(const Matrix &matrix);
+		void SetColor(const float vector[]);
     
         GLuint LoadShaderFromString(const std::string &shaderContents, GLenum type);
         GLuint LoadShaderFromFile(const std::string &shaderFile, GLenum type);
@@ -25,9 +26,12 @@ class ShaderProgram {
     
         GLuint projectionMatrixUniform;
         GLuint modelviewMatrixUniform;
+		GLuint colorModifierUniform;
     
         GLuint positionAttribute;
         GLuint texCoordAttribute;
+		GLuint exploredAttribute;
+		GLuint distanceAttribute;
     
         GLuint vertexShader;
         GLuint fragmentShader;

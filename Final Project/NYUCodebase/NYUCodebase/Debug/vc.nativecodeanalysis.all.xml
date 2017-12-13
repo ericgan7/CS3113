@@ -1,0 +1,1334 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>stb_image.h</FILENAME>
+      <LINE>1894</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'data'. </DESCRIPTION>
+    <FUNCTION>stbi__jpeg_decode_block_prog_ac</FUNCTION>
+    <DECORATED>?stbi__jpeg_decode_block_prog_ac@@YAHPAUstbi__jpeg@@QAFPAUstbi__huffman@@PAF@Z</DECORATED>
+    <FUNCLINE>1798</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1800</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1801</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1803</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1849</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1851</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1865</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1867</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1867</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1868</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1869</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1870</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1871</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1872</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1884</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1886</LINE>
+        <COLUMN>37</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1889</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1893</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1894</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1895</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'data' may be NULL (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1904</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'r==0' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1908</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1893</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'k&lt;=j-&gt;spec_end')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>1894</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'data' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>stb_image.h</FILENAME>
+      <LINE>3412</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'coutput'.</DESCRIPTION>
+    <FUNCTION>load_jpeg_image</FUNCTION>
+    <DECORATED>?load_jpeg_image@@YAPAEPAUstbi__jpeg@@PAH11H@Z</DECORATED>
+    <FUNCLINE>3320</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3322</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3322</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3323</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3326</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3329</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3332</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3334</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3337</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3341</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3342</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3342</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3343</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3344</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'coutput' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3346</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3348</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3348</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'k&lt;decode_n' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3371</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3372</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!output' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3375</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3375</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'j&lt;z-&gt;s-&gt;img_y')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3376</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3377</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3377</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'k&lt;decode_n' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3391</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'n&gt;=3' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3412</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'coutput' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>stb_image.h</FILENAME>
+      <LINE>3438</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '18200' bytes of stack:  exceeds /analyze:stacksize '16384'.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>stbi__jpeg_test</FUNCTION>
+    <DECORATED>?stbi__jpeg_test@@YAHPAUstbi__context@@@Z</DECORATED>
+    <FUNCLINE>3438</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>stb_image.h</FILENAME>
+      <LINE>3740</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'lencodes'.</DESCRIPTION>
+    <FUNCTION>stbi__compute_huffman_codes</FUNCTION>
+    <DECORATED>?stbi__compute_huffman_codes@@YAHPAUstbi__zbuf@@@Z</DECORATED>
+    <FUNCLINE>3713</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3715</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3716</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3717</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'lencodes' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3718</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3719</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3719</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3721</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3722</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3723</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3725</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3726</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3726</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3730</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3732</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3733</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'n&lt;hlit+hdist')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3734</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3735</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'c&lt;0||c&gt;=19' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3736</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'c&lt;16' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3738</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'c==16')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3739</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3740</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'lencodes' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>stb_image.h</FILENAME>
+      <LINE>3740</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'lencodes':  the readable size is '455' bytes, but '-1' bytes may be read.</DESCRIPTION>
+    <FUNCTION>stbi__compute_huffman_codes</FUNCTION>
+    <DECORATED>?stbi__compute_huffman_codes@@YAHPAUstbi__zbuf@@@Z</DECORATED>
+    <FUNCLINE>3713</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3715</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3716</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3717</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'lencodes' is an array of 455 elements (455 bytes)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3718</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3719</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3719</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3721</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3722</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3723</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3725</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3726</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3726</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3730</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3732</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3733</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'n&lt;hlit+hdist')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3734</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3735</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'c&lt;0||c&gt;=19' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3736</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'c&lt;16' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3738</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'c==16')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3739</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>stb_image.h</FILENAME>
+        <LINE>3740</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'lencodes[-1]', (readable range is 0 to 454)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>323</LINE>
+      <COLUMN>19</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'u'.</DESCRIPTION>
+    <FUNCTION>DrawIcon</FUNCTION>
+    <DECORATED>?DrawIcon@@YAXAAVShaderProgram@@IQAM1W4buttonType@@@Z</DECORATED>
+    <FUNCLINE>144</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>145</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>146</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>147</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>148</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>149</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'type' ) resolves to the default case</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>303</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'flag')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>304</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>323</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>323</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>472</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'u'.</DESCRIPTION>
+    <FUNCTION>entity::{ctor}</FUNCTION>
+    <DECORATED>??0entity@@QAE@W4entityType@@MMV?$vector@IV?$allocator@I@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>346</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>106</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>79</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>106</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1233</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1235</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1236</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1241</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1241</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1241</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1242</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1242</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1242</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>106</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1250</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1251</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>95</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>346</LINE>
+        <COLUMN>106</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>347</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>348</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>349</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>350</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>350</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>350</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>350</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>351</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'type' ) resolves to the default case</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>471</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>472</LINE>
+        <COLUMN>46</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>472</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>1172</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'u'.</DESCRIPTION>
+    <FUNCTION>entity::setTextures</FUNCTION>
+    <DECORATED>?setTextures@entity@@QAEXXZ</DECORATED>
+    <FUNCLINE>804</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>805</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>805</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>805</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>805</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>806</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>807</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>808</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'type==E_ARCHER' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>971</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'type==E_ENEMY')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>972</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>973</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>974</LINE>
+        <COLUMN>77</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>978</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>980</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'unitState' ) resolves to case STATUS_DEAD: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1168</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1171</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1172</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1172</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'u' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>1765</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 't' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1701' of 'c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\main.cpp'.</DESCRIPTION>
+    <FUNCTION>UI::input</FUNCTION>
+    <DECORATED>?input@UI@@QAE?AU?$pair@W4commandState@@W4buttonType@@@std@@V?$vector@PAVentity@@V?$allocator@PAVentity@@@std@@@3@MM@Z</DECORATED>
+    <FUNCLINE>1700</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>1701</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>2801</LINE>
+      <COLUMN>28</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'pos' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '2760' of 'c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\main.cpp'.</DESCRIPTION>
+    <FUNCTION>Gamestate::update</FUNCTION>
+    <DECORATED>?update@Gamestate@@QAEXM@Z</DECORATED>
+    <FUNCLINE>2718</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>2760</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\final project\nyucodebase\nyucodebase\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>3376</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>6282</DEFECTCODE>
+    <DESCRIPTION>Incorrect operator:  assignment of constant in Boolean context. Consider using '==' instead.</DESCRIPTION>
+    <FUNCTION>Gamemenu::{ctor}</FUNCTION>
+    <DECORATED>??0Gamemenu@@QAE@V?$vector@IV?$allocator@I@std@@@std@@W4mode@@@Z</DECORATED>
+    <FUNCLINE>3375</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

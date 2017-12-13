@@ -34,8 +34,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="fragment.glsl" />
-    <None Include="vertex.glsl" />
     <None Include="fragment_textured.glsl" />
+    <None Include="vertex_textured.glsl" />
+    <None Include="fragment_fogOfWar.glsl" />
+    <None Include="vertex_fogOfWar.glsl" />
   </ItemGroup>
 </Project>

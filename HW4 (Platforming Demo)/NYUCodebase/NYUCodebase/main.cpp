@@ -529,8 +529,8 @@ public:
 		else {
 			modelviewMatrix->Identity();
 			program->SetModelviewMatrix(*modelviewMatrix);
-			glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, staticVerticies.data());
-			glEnableVertexAttribArray(program->vertexShader);
+			glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, staticVerticies.data());
+			glEnableVertexAttribArray(program->positionAttribute);
 			GLuint textureMap = textures[1];
 			glBindTexture(GL_TEXTURE_2D, textureMap);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
@@ -642,8 +642,8 @@ public:
 		staticTextures = texData;
 		modelviewMatrix->Identity();
 		program->SetModelviewMatrix(*modelviewMatrix);
-		glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, vertexData.data());
-		glEnableVertexAttribArray(program->vertexShader);
+		glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, vertexData.data());
+		glEnableVertexAttribArray(program->positionAttribute);
 		GLuint textureMap = textures[1];
 		glBindTexture(GL_TEXTURE_2D, textureMap);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
@@ -749,8 +749,8 @@ public:
 		glBindTexture(GL_TEXTURE_2D, textures[0]);
 		program->SetModelviewMatrix(*modelviewMatrix);
 		program->SetProjectionMatrix(*projectionMatrix);
-		glVertexAttribPointer(program->vertexShader, 2, GL_FLOAT, false, 0, vertexData.data());
-		glEnableVertexAttribArray(program->vertexShader);
+		glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, vertexData.data());
+		glEnableVertexAttribArray(program->positionAttribute);
 		glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, texCoordData.data());
 		glEnableVertexAttribArray(program->texCoordAttribute);
 		glDrawArrays(GL_TRIANGLES, 0, vertexData.size() / 2);
@@ -836,7 +836,8 @@ int main(int argc, char *argv[])
 	float time;
 	float elapsed;
 	float last = 0.0f;
-	float fps = 120.0f;
+	float fps = 1 / 60.0f;
+	float accumulator = 0.0f;
 	glClearColor(0.52f, 0.81f, 0.92f, 1.0f);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -853,13 +854,20 @@ int main(int argc, char *argv[])
 		program.SetProjectionMatrix(projectionMatrix);
 		time = SDL_GetTicks() *0.001f;
 		elapsed = time - last;
-		if (elapsed > 1 / fps) {
+		last = time;
+		elapsed += accumulator;
+		if (elapsed < fps) {
+			accumulator = elapsed;
+			continue;
+		}
+		while (elapsed > fps) { //can account for extra steps
+			elapsed -= fps;
 			input(&state);
-			state.update(elapsed, &projectionMatrix);
+			state.update(fps, &projectionMatrix);
 			glClear(GL_COLOR_BUFFER_BIT);
 			state.render(&program, &modelviewMatrix, &projectionMatrix);
-			last = time;
 		}
+		accumulator = elapsed;
 		glDisableVertexAttribArray(program.positionAttribute);
 		glDisableVertexAttribArray(program.texCoordAttribute);
 		SDL_GL_SwapWindow(displayWindow);

@@ -733,7 +733,7 @@ public:
 	void select(Gamemode& mode, bool& done, Mix_Music* gameMusic) {
 		if (play.selected) {
 			mode = MODE_GAME;
-			Mix_HaltMusic;
+			Mix_HaltMusic();
 			Mix_PlayMusic(gameMusic, -1);
 		}
 		else if (quit.selected){
@@ -913,12 +913,12 @@ int main(int argc, char *argv[])
 	GLuint death = LoadTexture(RESOURCE_FOLDER "explosion.png");
 
 	//sounds
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 4, 4096);
 	Mix_Chunk* explosion = Mix_LoadWAV("sound_explosion.wav");
 	Mix_Chunk* playerShot = Mix_LoadWAV("sound_shoot.wav");
 	Mix_Chunk* enemyDoubleShot = Mix_LoadWAV("sound_shoot_double.wav");
 	Mix_Chunk* enemyShot = Mix_LoadWAV("sound_shoot2.wav");
-	Mix_Music* music1 = Mix_LoadMUS("SciFi_zetauri.wav");
+	Mix_Music* music1 = Mix_LoadMUS("SciFi_zetauri.mp3");
 	Mix_Music* music2 = Mix_LoadMUS("SciFi_Unknown.mp3");
 	Mix_Chunk* soundEffects[4] = { explosion, playerShot, enemyShot, enemyDoubleShot };
 

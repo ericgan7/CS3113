@@ -16,6 +16,5 @@ c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homewo
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw5 (sound + space invaders)\nyucodebase\nyucodebase\main.cpp(574): warning C4018: '<': signed/unsigned mismatch
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw5 (sound + space invaders)\nyucodebase\nyucodebase\main.cpp(583): warning C4018: '<': signed/unsigned mismatch
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw5 (sound + space invaders)\nyucodebase\nyucodebase\main.cpp(593): warning C4018: '<': signed/unsigned mismatch
-c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw5 (sound + space invaders)\nyucodebase\nyucodebase\main.cpp(736): warning C4551: function call missing argument list
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw5 (sound + space invaders)\nyucodebase\nyucodebase\main.cpp(281): warning C4715: 'entity::shoot': not all control paths return a value
   NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\CS3113-Homework\HW5 (Sound + Space Invaders)\NYUCodebase\Debug\NYUCodebase.exe

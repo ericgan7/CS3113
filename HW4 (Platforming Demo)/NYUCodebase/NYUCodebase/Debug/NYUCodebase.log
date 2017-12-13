@@ -32,4 +32,3 @@ c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homewo
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw4 (platforming demo)\nyucodebase\nyucodebase\main.cpp(712): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\users\kyzar\documents\visual studio 2015\projects\3113\homework\cs3113-homework\hw4 (platforming demo)\nyucodebase\nyucodebase\main.cpp(728): warning C4018: '<': signed/unsigned mismatch
   NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\CS3113-Homework\HW4 (Platforming Demo)\NYUCodebase\Debug\NYUCodebase.exe
-  NYUCodebase.vcxproj -> C:\Users\kyzar\Documents\Visual Studio 2015\Projects\3113\Homework\CS3113-Homework\HW4 (Platforming Demo)\NYUCodebase\Debug\NYUCodebase.pdb (Full PDB)
